@@ -1,0 +1,21 @@
+name: Task (agreed work)
+description: A concrete piece of work already agreed in Discussions
+labels: [task]
+body:
+  - type: input
+    id: discussion
+    attributes:
+      label: Link to the Discussion where this was agreed
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options: [runner, ranking/probe, dashboard, runtime, storage, spec, docs]
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope and acceptance criteria
+    validations:
+      required: true
